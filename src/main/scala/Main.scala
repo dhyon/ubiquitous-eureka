@@ -33,7 +33,7 @@ object Main extends App {
    * @return md5 hash of resource
    */
   def getMd5(url: String): Future[String] = Future {
-    //    println(s"debug: start for ${url}")
+    // println(s"debug: start for ${url}")
     val md5 = MessageDigest.getInstance("MD5")
     // read in bytes to message digest
     Using(new URL(url).openStream) { in: InputStream =>
@@ -45,7 +45,7 @@ object Main extends App {
         dis.close()
       }
     }
-    //    println(s"debug: end for ${url}")
+    // println(s"debug: end for ${url}")
     md5.digest.map("%02x".format(_)).mkString
   }
 }

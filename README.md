@@ -6,7 +6,8 @@
 ###### Instructions:
 
 Reqs:
-- sbt
+- sbt 1.7.1
+- JDK 8/11 (18 works for me)
 
 From project root:
 
